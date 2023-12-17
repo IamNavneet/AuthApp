@@ -3,8 +3,10 @@ const morgan = require('morgan');
 const createError = require('http-errors');
 require('dotenv').config()
 const authRoute = require('./src/routes/auth.route')
+require('./helpers/init_mongodb')
 
 const app = express();
+app.use(morgan('dev'))
 const PORT = process.env.PORT || 3000;
 
 app.get('/', async (req, res, next) => {
