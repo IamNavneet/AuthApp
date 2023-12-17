@@ -1,0 +1,1 @@
+The Auth App with proper error handling
