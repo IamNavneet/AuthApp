@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router()
+const {login} = require('../controllers/auth.controller')
 
-router.post('/login', async(req, res, next) => {
-    res.status(200).json({
-        success: true,
-        message: "you are logged in successully!!"
-    })
-})
+router.post('/login', login)
 
 module.exports = router
